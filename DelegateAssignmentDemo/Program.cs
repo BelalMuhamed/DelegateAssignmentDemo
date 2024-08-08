@@ -80,6 +80,12 @@
 
             }
             #endregion
+
+            #region v06
+            List<int>filtered = list.Where((n) => n % 2 == 0).ToList();
+            filtered = list.Where(delegate (int n) { return n % 2 == 0; }).ToList();
+
+            #endregion
         }
     }
 }
