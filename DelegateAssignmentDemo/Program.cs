@@ -2,6 +2,10 @@
 {
     internal class Program
     {
+        public static Action Test()
+        {
+            return () => { Console.WriteLine("hello"); };
+        }
         static void Main(string[] args)
         {
             #region V03
@@ -85,6 +89,14 @@
             List<int>filtered = list.Where((n) => n % 2 == 0).ToList();
             filtered = list.Where(delegate (int n) { return n % 2 == 0; }).ToList();
 
+            #endregion
+
+            #region v08
+            Console.Clear();
+            Console.WriteLine(Test());
+            Test()();
+           Action act = Test();
+            Console.WriteLine(act);
             #endregion
         }
     }
