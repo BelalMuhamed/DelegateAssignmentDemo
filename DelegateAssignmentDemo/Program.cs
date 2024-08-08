@@ -19,6 +19,38 @@
                 Console.WriteLine(i);
             }
             #endregion
+
+
+            #region v04
+            int[] arr02 = { 7, 6, 5, 8, 2, 3, 9, 10, 55, 4 };
+            string[] arr03 = { "Ahmed", "Ali", "Kayaan", "k", "KI", "Kill" };
+            GenaricDelegate.BubbleSort(arr02, GenaricDelegate.Greater);
+            foreach (var i in arr02)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("***********************************************");
+            GenaricDelegate.BubbleSort(arr02, GenaricDelegate.Less);
+
+            foreach (var i in arr02)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("***********************************************");
+            GenaricDelegate.BubbleSort(arr03, GenaricDelegate.SortAsending);
+
+            foreach (var i in arr03)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("***********************************************");
+            GenaricDelegate.BubbleSort(arr03, GenaricDelegate.SortDesending);
+
+            foreach (var i in arr03)
+            {
+                Console.WriteLine(i);
+            }
+            #endregion
         }
     }
 }
