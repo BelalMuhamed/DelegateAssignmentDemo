@@ -51,6 +51,35 @@
                 Console.WriteLine(i);
             }
             #endregion
+
+            #region v05
+            Console.Clear();
+            List<int> list = Enumerable.Range(1,100).ToList();
+            List<int> checkedlist = new List<int>();
+            check check= CheckNumber.Even;
+            checkedlist=CheckNumber.checkNumber(list, check);
+            foreach(var i in checkedlist)
+            {
+                Console.Write($"{i}  ");
+               
+            }
+            Console.WriteLine("***********************************************************************");
+             check = CheckNumber.Odd;
+            checkedlist = CheckNumber.checkNumber(list, check);
+            foreach (var i in checkedlist)
+            {
+                Console.Write($"{i}  ");
+
+            }
+            Console.WriteLine("***********************************************************************");
+            check = CheckNumber.DivisableBy4;
+            checkedlist = CheckNumber.checkNumber(list, check);
+            foreach (var i in checkedlist)
+            {
+                Console.Write($"{i}  ");
+
+            }
+            #endregion
         }
     }
 }
